@@ -1,0 +1,38 @@
+{
+  "name": "twitty",
+  "version": "1.0.0",
+  "description": "twitty",
+  "main": "./src/index.js",
+  "scripts": {
+    "serve": "nodemon --legacy-watch   --exec \"babel-node ./src/index.js\"",
+    "build": "babel ./src -d dist/src --copy-files && cp ./package.json ./dist/package.json && cp -r ./node_modules ./dist/node_modules",
+    "reindex": "babel-node ./src/bin/reindex.js",
+    "reindex:flush": "babel-node ./src/bin/reindex.js --flush"
+  },
+  "config": {},
+  "author": "yazanalatrash591@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "7.12.0",
+    "compromise": "^13.11.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "@elastic/elasticsearch-mock": "0.3.0",
+    "babel-node": "0.0.1-security",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.6"
+  }
+}

@@ -1,0 +1,8 @@
+.env
+node_modules
+.github
+.vscode
+dist
+logs
+.DS_Store
+/src/.DS_Store
